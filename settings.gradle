@@ -1,0 +1,22 @@
+pluginManagement {
+	plugins {
+		id 'com.diffplug.blowdryer'          version '1.1.1'
+		id 'com.diffplug.blowdryerSetup'     version '1.1.1'
+		id 'com.diffplug.osgi.bndmanifest'   version '3.28.0'
+		id 'com.diffplug.spotless-changelog' version '2.0.0'
+		id 'com.diffplug.spotless'           version '5.10.1'
+		id 'org.jdrupes.mdoclet'             version '1.0.10'
+	}
+}
+plugins {
+	id 'com.diffplug.blowdryerSetup'
+	id 'com.diffplug.osgi.bndmanifest'        apply false
+	id 'com.diffplug.spotless-changelog'      apply false
+	id 'com.diffplug.spotless'                apply false
+	id 'org.jdrupes.mdoclet'                  apply false
+}
+rootProject.name = 'libxdiff'
+blowdryerSetup {
+	//github 'diffplug/blowdryer-diffplug', 'tag', '3.2.5'
+	devLocal '../blowdryer-diffplug'
+}

@@ -1,0 +1,13 @@
+plugins {
+	id 'com.diffplug.blowdryer'
+	id 'com.diffplug.spotless-changelog'
+}
+
+spotlessChangelog {
+	changelogFile 'README.md'
+}
+
+apply from: 干.file('base/changelog.gradle')
+apply from: 干.file('base/java8.gradle')
+apply from: 干.file('base/maven.gradle')
+apply from: 干.file('spotless/freshmark.gradle')
